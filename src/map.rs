@@ -113,13 +113,13 @@ impl fmt::Display for Map {
             for y in 0..MAP_HEIGHT {
                 let word = self.plane0[x][y];
                 if word == 90 {
-                    write!(f, "|").unwrap();
+                    write!(f, '" ", ').unwrap();
                 } else if word == 91 {
-                    write!(f, "-").unwrap();
+                    write!(f, '" ", ').unwrap();
                 } else if word < 107 {
-                    write!(f, "W").unwrap();
+                    write!(f, "blu, ").unwrap();
                 } else {
-                    write!(f, " ").unwrap();
+                    write!(f, '" ", ').unwrap();
                 }
             }
             writeln!(f).unwrap();
